@@ -9,6 +9,6 @@ namespace API.Controllers
 {
     public class ValuesController : ApiController
     {
-        [HttpPost]
+       
     }
 }

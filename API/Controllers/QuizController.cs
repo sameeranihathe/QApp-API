@@ -45,11 +45,12 @@ namespace API.Controllers
                 var result = db.Questions
                     .AsEnumerable()
                     .Where(y => qIDs.Contains(y.QnID))
-                    .OrderBy(x => { return Array.IndexOf(qIDs, x.QnID})
+                    .OrderBy(x => { return Array.IndexOf(qIDs, x.QnID); })
                     .Select(z => z.Answer)
                     .ToArray();
 
                 return this.Request.CreateResponse(HttpStatusCode.OK, result);
             }
+        }
     }
 }
